@@ -1,4 +1,4 @@
-# Git Push Sound (`vscode-git-push-sound`)
+# Fairy Dust: Git Push Sound (`vscode-git-push-sound`)
 
 Sprinkle a little magic on every deploy—this VS Code extension plays a magical fairy dust sound effect every time you successfully run `git push` in the integrated terminal.
 
@@ -7,6 +7,12 @@ Sprinkle a little magic on every deploy—this VS Code extension plays a magical
 - **Automatic Push Detection:** Listens to commands executed in VS Code's built-in terminal via Shell Integration.
 - **Success-Only Trigger:** Only plays the chime when `git push` finishes cleanly with exit code `0` (so failed pushes won't celebrate prematurely).
 - **Lightweight & Zero-Dependency Playback:** Uses native OS audio playback (`afplay` on macOS, PowerShell `Media.SoundPlayer` on Windows, and `paplay` on Linux).
+
+## Installation
+
+1. Open the **Extensions** view in VS Code (`Cmd+Shift+X` on macOS or `Ctrl+Shift+X` on Windows/Linux).
+2. Search for **`Fairy Dust: Git Push Sound`** (or `khatisani.vscode-git-push-sound`).
+3. Click **Install**.
 
 ## Requirements
 
@@ -19,6 +25,11 @@ Sprinkle a little magic on every deploy—this VS Code extension plays a magical
 - **Audio:** [Fairy Dust Magic Sound Effect](https://www.youtube.com/watch?v=NeFR0_u4p5I) by **The Audio Horizon SFX**
 
 ## Release Notes
+
+### 0.0.2
+
+- Updated extension display name to **Fairy Dust: Git Push Sound**.
+- Updated bundled fairy dust audio clip and Marketplace icon.
 
 ### 0.0.1
 

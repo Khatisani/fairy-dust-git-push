@@ -1,6 +1,6 @@
 {
   "name": "vscode-git-push-sound",
-  "displayName": "Git Push Sound",
+  "displayName": "Fairy Dust: Git Push Sound",
   "description": "Plays an audio clip on git push",
   "publisher": "khatisani",
   "icon": "media/icon.png",
@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/Khatisani/vscode-git-push-sound.git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.93.0"
   },
