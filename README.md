@@ -16,7 +16,7 @@ Sprinkle a little magic on every deploy—this VS Code extension plays a magical
 
 ## Credits
 
-- **Audio:** [Magic Glitter Fairy Dust - Sound Effect (HD)](http://www.youtube.com/watch?v=QMDQck-WbxY) by **Gaming Sound FX**
+- **Audio:** [Fairy Dust Magic Sound Effect](https://www.youtube.com/watch?v=NeFR0_u4p5I) by **The Audio Horizon SFX**
 
 ## Release Notes
 
