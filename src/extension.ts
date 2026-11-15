@@ -2,19 +2,36 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 import { execFile } from 'child_process';
 
+function playWithFallback(commands: [string, string[]][]) {
+  if (commands.length === 0) {
+    return;
+  }
+
+  const [[cmd, args], ...rest] = commands;
+  execFile(cmd, args, (err) => {
+    if (err) {
+      playWithFallback(rest);
+    }
+  });
+}
+
 function playSound(context: vscode.ExtensionContext) {
-  const soundPath = path.join(context.extensionPath, 'media', 'push.mp3');
+  const mp3Path = path.join(context.extensionPath, 'media', 'push.mp3');
+  const wavPath = path.join(context.extensionPath, 'media', 'push.wav');
 
   if (process.platform === 'darwin') {
-    execFile('afplay', [soundPath]);
+    execFile('afplay', [mp3Path]);
   } else if (process.platform === 'win32') {
-    const wavPath = soundPath.replace(/\.mp3$/, '.wav');
     execFile('powershell', [
       '-c',
       `(New-Object Media.SoundPlayer '${wavPath}').PlaySync()`
     ]);
   } else {
-    execFile('paplay', [soundPath]);
+    playWithFallback([
+      ['paplay', [wavPath]],
+      ['pw-play', [wavPath]],
+      ['aplay', ['-q', wavPath]]
+    ]);
   }
 }
 
