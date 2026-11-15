@@ -31,6 +31,10 @@ Sprinkle a little magic on every deploy—this VS Code extension plays a magical
 
 ## Release Notes
 
+### 0.0.4
+
+- Bundled `push.wav` and added automatic Linux audio fallbacks (`paplay` → `pw-play` → `aplay`) for reliable playback across Linux distributions and Windows.
+
 ### 0.0.3
 
 - Trigger the fairy dust sound whenever `git push` appears anywhere in the executed terminal command line (supporting chained commands like `git commit && git push`).
