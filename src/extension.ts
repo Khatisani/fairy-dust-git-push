@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
   const terminalListener = vscode.window.onDidEndTerminalShellExecution((event) => {
     const command = event.execution.commandLine.value.trim();
 
-    if (command.startsWith('git push') && event.exitCode === 0) {
+    if (/\bgit\s+push\b/i.test(command) && event.exitCode === 0) {
       playSound(context);
     }
   });
