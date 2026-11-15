@@ -31,6 +31,10 @@ Sprinkle a little magic on every deploy—this VS Code extension plays a magical
 
 ## Release Notes
 
+### 0.0.3
+
+- Trigger the fairy dust sound whenever `git push` appears anywhere in the executed terminal command line (supporting chained commands like `git commit && git push`).
+
 ### 0.0.2
 
 - Updated extension display name to **Fairy Dust: Git Push Sound**.
